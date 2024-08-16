@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { codecovVitePlugin } from "@codecov/vite-plugin";
 
 export default defineConfig({
   build: {
