@@ -1,7 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: "[name].[hash].js",
+        chunkFileNames: "[name]-[hash].js",
+      },
+    },
+  },
+  plugins: [
+    react(),
+    codecovVitePlugin({
+      enableBundleAnalysis: true,
+      bundleName: "@codecov/example-vite-app",
+      uploadToken: process.env.VITE_UPLOAD_TOKEN,
+      apiUrl: process.env.VITE_API_URL,
+      debug: true,
+    }),
+  ],
+});
+
