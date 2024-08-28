@@ -30,7 +30,7 @@ export default defineConfig({
         react(),
         codecovVitePlugin({
             enableBundleAnalysis: true,
-            bundleName: "@codecov/example-vite-app",
+            bundleName: "hello-vite",
             uploadToken: process.env.VITE_UPLOAD_TOKEN,
             apiUrl: process.env.VITE_API_URL,
             debug: true,
