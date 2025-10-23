@@ -8,6 +8,7 @@ function App() {
 
     const doubled = couunt * 2;
 
+    console.log(doubled);
     return (
         <>
             <div>
