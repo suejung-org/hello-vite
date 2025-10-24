@@ -11,6 +11,8 @@ function App() {
     console.log(doubled);
 
     // some more code
+
+    // another commit
     return (
         <>
             <div>
