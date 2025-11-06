@@ -6,6 +6,14 @@ import "./App.css";
 function App() {
     const [count, setCount] = useState(0);
 
+    const doubled = couunt * 2;
+
+    console.log(doubled);
+
+    // some more code
+
+    // another commit
+    // one more
     return (
         <>
             <div>
